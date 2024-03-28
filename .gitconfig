@@ -1,0 +1,24 @@
+[user]
+	name = tclv
+        email = dorusleliveld@gmail.com
+[includeIf "hasconfig:remote.*.url:git@github.com:entistech/**"]
+	path = ~/.gitconfig.entis
+
+[core]
+	editor = nvim
+        excludesfile = ~/.gitignore
+
+[pull]
+        ff = only
+
+[diff]
+        tool = difftastic
+
+[difftool]
+        prompt = false
+
+[difftool "difftastic"]
+        cmd = difft "$LOCAL" "$REMOTE"
+
+[pager]
+        difftool = true

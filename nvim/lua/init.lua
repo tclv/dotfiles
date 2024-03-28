@@ -27,7 +27,8 @@ vim.o.smarttab = true
 
 vim.keymap.set("n", "<Leader>n", ':let@/=""<CR>')
 
-vim.cmd("colorscheme kanagawa")
+-- vim.cmd("colorscheme kanagawa-dragon")
+require("kanagawa").load("dragon")
 vim.g.airline_theme = "raven"
 
 vim.o.spell = true
@@ -55,10 +56,12 @@ vim.keymap.set("n", "<Leader>pi", ":PackerSync<CR>")
 vim.keymap.set("n", "<Leader>pu", ":PackerUpdate<CR>")
 vim.keymap.set("n", "<Leader>pc", ":PackerClean<CR>")
 
-vim.g.python_host_prog = "/Users/dorus/.nvim_python/python2/.venv/bin/python"
-vim.g.python3_host_prog = "/Users/dorus/.nvim_python/python3/.venv/bin/python"
+vim.g.python3_host_prog = "~/.python-nvim/python3/venv/bin/python"
 
 vim.g.poetv_auto_activate = 1
+
+vim.o.background = ""
+
 
 require("config/telescope")
 require("config/null-ls")

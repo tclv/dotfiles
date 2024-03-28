@@ -19,7 +19,6 @@ return require("packer").startup(function(use)
 	use("vim-airline/vim-airline-themes")
 	use("benmills/vimux")
 	use("christoomey/vim-tmux-navigator")
-	use("petobens/poet-v")
 
 	use("hrsh7th/nvim-cmp")
 	use("hrsh7th/cmp-buffer")
