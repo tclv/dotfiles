@@ -12,9 +12,10 @@ mkdir -p ~/.config/nvim
 mkdir -p ~/.config/pypoetry
 
 ## Bash/zshrc
-echo ". /opt/homebrew/opt/asdf/libexec/asdf.sh" >> ~/.profile
-echo 'export PATH=~/.local/bin:$PATH' >> ~/.profile
-echo 'export PATH=~/.local/bin:$PATH' >> ~/.zprofile
+echo ". /opt/homebrew/opt/asdf/libexec/asdf.sh" >> ~/.bashrc
+echo ". /opt/homebrew/opt/asdf/libexec/asdf.sh" >> ~/.zshrc
+echo 'export PATH=~/.local/bin:$PATH' >> ~/.bashrc
+echo 'export PATH=~/.local/bin:$PATH' >> ~/.zshrc
 export PATH=~/.local/bin:$PATH
 
 ## Fish
@@ -26,6 +27,8 @@ which fish | xargs chsh -s
 asdf plugin-add python
 asdf install python latest
 asdf global python latest
+
+ln -sf $(pwd)/.asdfrc ~/
 
 
 ## Nvim
@@ -67,3 +70,5 @@ rm -rf fonts
 ## Miscaleneous
 brew install tldr
 brew install difftastic
+
+ln -s $(pwd)/bin/* ~/.local/bin

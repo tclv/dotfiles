@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
 token_response=$(az account get-access-token --resource 2ff814a6-3304-4ab8-85cb-cd0e6f879c1d)
-export DATABRICKS_AAD_TOKEN=$(jq .accessToken -r <<< "$token_response")
+token=$(jq .accessToken -r <<< "$token_response")
 
 declare -A envs=(
    [bricks-dev]=https://adb-7260022447861117.17.azuredatabricks.net/
@@ -15,5 +15,5 @@ declare -A envs=(
 )
 
 for env in "${!envs[@]}"; do
-   databricks configure --host "${envs[$env]}" --profile "$env" --aad-token
+    echo $token | databricks configure --host "${envs[$env]}" --profile "$env"
 done
