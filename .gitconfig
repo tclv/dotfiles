@@ -1,8 +1,8 @@
 [user]
 	name = tclv
         email = dorusleliveld@gmail.com
-[includeIf "hasconfig:remote.*.url:git@github.com:entistech/**"]
-	path = ~/.gitconfig.entis
+[includeIf "hasconfig:remote.*.url:git@github.com:cedcapai/**"]
+	path = ~/.gitconfig.cedalion
 
 [core]
 	editor = nvim

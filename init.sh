@@ -2,8 +2,9 @@ brew install iterm2
 brew install fish
 brew install neovim
 brew install asdf
-brew install tmux brew install xz
-brew intall node
+brew install tmux
+brew install xz
+brew install node
 brew install ripgrep
 brew install fd
 
@@ -52,9 +53,6 @@ curl -sSL https://install.python-poetry.org | python -
 poetry self add artifacts-keyring poetry-dynamic-versioning
 ln -sf $(pwd)/pypoetry/* ~/.config/pypoetry
 
-## Dotnet
-brew install dotnet dotnet-sdk
-
 ## Git
 ln -sf $(pwd)/.gitignore ~/
 ln -sf $(pwd)/.gitconfig ~/
@@ -71,4 +69,4 @@ rm -rf fonts
 brew install tldr
 brew install difftastic
 
-ln -s $(pwd)/bin/* ~/.local/bin
+ln -s $(pwd)/bin/* ~/.local/bin/
